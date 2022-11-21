@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+:root {
+    --clr-dark: #272A31;
+    --clr-red: #EC5242;
+    --clr-gray: #D3D3D3;
+
+    --ff-coco: 'COCOGOOSE', sans-serif;
+    --ff-lato: 'Lato', sans-serif;
+}
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 1.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+.head-content {
+    background-color: #fbfbfb;
+    background-image: url("../assets/intro_bg.jpg");
+    background-size: cover;
+    background-position-y: -70px;
+    background-repeat: no-repeat;
+    padding: 20px;
+    max-height: 800px;
+}
+
+
+nav .fa-bars {
+    font-size: 2em;
+    padding-left: 10px;
+    color: var(--clr-dark);
+}
+
+.intro{
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.intro .intro_welcome{
+    font-family: var(--ff-lato);
+    color: var(--clr-red);
+}
+
+.intro h1{
+    font-family: var(--ff-coco);
+    font-size: 2em;
+    color: var(--clr-red);
+    font-weight: 300;
+    letter-spacing: -1px;
+    line-height: 1em;
+    padding-top: 10px;
+}
+
+h1 .head_small{
+    font-size: 35px;
+}
+
+.intro .intro_desc {
+    margin-top: 35px;
+    font-family: var(--ff-lato);
+    font-size: 16px;
+    border: 2px solid white;
+    padding: 15px;
+    max-width: 400px;
+    color: var(--clr-dark);
+}
+
+.intro h2 {
+    font-family: var(--ff-coco);
+    color: var(--clr-dark);
+    font-weight: 200;
+    font-size: 1.15em;
+    padding-top: 20px;
+}
+
+.intro .date_title{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--ff-lato);
+}
+
+.intro p {
+    font-family: var(--ff-lato);
+    font-size: 16px;
+    color: var(--clr-dark);
+    font-weight: 800;
+}
+
+.main_program {
+    background-image: url("../assets/main_bg.png");
+    background-size: contain;
+    color: var(--clr-gray);
+}
