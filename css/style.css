@@ -111,6 +111,9 @@ h1 .head_small {
   background-size: contain;
   color: var(--clr-gray);
   padding: 15px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .main_title {
@@ -152,13 +155,6 @@ h1 .head_small {
   font-size: 1.5em;
 }
 
-.main_program {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 40px;
-}
-
 .join_btn {
   font-family: var(--ff-lato);
   font-size: 0.8em;
@@ -183,6 +179,7 @@ h1 .head_small {
   align-items: center;
   padding: 40px 15px;
   font-family: var(--ff-lato);
+  color: var(--clr-dark);
 }
 
 .musicians {
@@ -204,6 +201,11 @@ h1 .head_small {
   gap: 20px;
   margin-top: 20px;
   max-width: 600px;
+}
+
+.musician h3 {
+  font-weight: 700;
+  color: var(--clr-dark);
 }
 
 .musician_line {
@@ -284,4 +286,134 @@ footer h3 {
 
 footer p {
   font-size: 12px;
+}
+
+/* About Us section */
+
+.about_title {
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  color: var(--clr-red);
+  font-family: var(--ff-lato);
+  text-align: center;
+}
+
+.about_title h1 {
+  font-family: var(--ff-coco);
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 35px;
+}
+
+.about_sub {
+  font-size: 35px;
+}
+
+.about_desc_desk {
+  display: none;
+}
+
+.desc_container {
+  padding: 20px 0;
+}
+
+.about_desc {
+  margin: auto;
+  width: 80%;
+  font-family: var(--ff-lato);
+  font-size: 14px;
+  color: var(--clr-dark);
+  background-color: #f1f1f1;
+  padding: 20px;
+  border: 2px solid white;
+  text-align: center;
+  line-height: 22px;
+}
+
+.about_contact {
+  font-family: var(--ff-lato);
+  color: var(--clr-dark);
+  font-size: 14px;
+  padding: 10px 20px 40px;
+  text-align: center;
+}
+
+.email_link {
+  text-decoration: underline;
+  color: var(--clr-dark);
+  font-weight: bolder;
+}
+
+.section_two {
+  padding: 30px 20px;
+  font-family: var(--ff-lato);
+  color: var(--clr-dark);
+  text-align: center;
+}
+
+.logo_line {
+  width: 30px;
+}
+
+.section_two p,
+.section_three p {
+  padding-top: 30px;
+  font-size: 16px;
+}
+
+.section_two img {
+  margin-top: 30px;
+  max-width: 240px;
+  height: auto;
+  padding: 15px 30px;
+  border: 1px solid var(--clr-gray);
+}
+
+.divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--clr-gray);
+  margin: 20px 0;
+}
+
+.section_three {
+  padding: 30px 20px;
+  font-family: var(--ff-lato);
+  color: var(--clr-dark);
+  text-align: center;
+}
+
+.section_three .part1 {
+  padding: 40px 20px;
+  color: white;
+  margin-top: 30px;
+  background-image: url("../assets/concert.jpg");
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(200, 67, 53, 0.55);
+  transition: 0.8s;
+}
+
+.section_three .part2 {
+  padding: 40px 20px;
+  color: white;
+  margin-top: 30px;
+  background-image: url("../assets/concert2.jpg");
+  background-size: cover;
+  background-position-y: -50px;
+  box-shadow: inset 0 0 0 2000px rgba(200, 67, 53, 0.55);
+  transition: 0.8s;
+}
+
+.concert:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 2000px rgba(200, 67, 53, 0.85);
+  color: var(--clr-gray);
+}
+
+.concert h3 {
+  font-size: 17px;
 }
