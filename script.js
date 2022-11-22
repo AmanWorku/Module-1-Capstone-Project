@@ -59,7 +59,7 @@ musicians.innerHTML = '';
 for (let i = 0; i < musicianData.length; i++){
     musicians.innerHTML += `
     <div class="musician">
-            <div class="single_musician"><img src="assets/${musicianData[i].imgFile}" width="130" height="130"></div>
+            <div class="single_musician"><img src="assets/${musicianData[i].imgFile}" alt="a person's image" width="130" height="130"></div>
             <div class="music_desc">
             <h3>${musicianData[i].personName}</h3>
             <h4>${musicianData[i].occupation}</h4>

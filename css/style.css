@@ -3,7 +3,7 @@
 :root {
   --clr-dark: #272a31;
   --clr-red: #ec5242;
-  --clr-gray: #d3d3d3;
+  --clr-gray: #ececec;
   --ff-coco: 'COCOGOOSE', sans-serif;
   --ff-lato: 'Lato', sans-serif;
 }
@@ -36,7 +36,9 @@ p {
   background-repeat: no-repeat;
   max-height: 800px;
 }
-
+.top, .navbar{
+  display: none;
+}
 nav .fa-bars {
   font-size: 2em;
   padding: 15px;
@@ -77,8 +79,7 @@ h1 .head_small {
   padding: 15px;
   max-width: 80%;
   color: var(--clr-dark);
-  margin-left: auto;
-  margin-right: auto;
+  background-color: #f6f6f6;
 }
 
 .intro h2 {
@@ -467,7 +468,148 @@ footer p {
 /* Desktop Version*/
 
 @media (min-width: 768px){
+
   nav .fa-bars{
     display: none;
+  }
+
+  .top{
+    padding: 5px 150px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    background-color: var(--clr-dark);
+    color: white;
+  }
+  .top li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 5px;
+  }
+  .top li a{
+    text-decoration: none;
+    color: white;
+    font-family: var(--ff-lato);
+    font-size: 15px;
+  }
+
+  .top li a:hover , .top i:hover {
+    color: var(--clr-red);
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .navbar{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    padding: 15px 10vw;
+  }
+
+  .navbar img{
+    max-width: 150px;
+    height: auto;
+  }
+
+  .navbar ul{
+    padding-top: 5px;
+    display: flex;
+    list-style-type: none;
+    justify-self: flex-end;
+    gap: 50px;
+  }
+
+  .navbar ul a{
+    text-decoration: none;
+    font-family: var(--ff-lato);
+    color: var(--clr-dark);
+    font-size: 16px;
+  }
+
+  .navbar ul a:hover {
+    transition: 0.2s ease-in;
+    color: var(--clr-red);
+  }
+
+  .navbar .last a{
+    border: 2px solid var(--clr-red);
+    color: var(--clr-red);
+    padding: 5px 10px;
+    margin-top: -10px;
+  }
+
+  .navbar .last a:hover {
+    background-color: var(--clr-red);
+    color: white;
+  }
+
+  .intro {
+    margin-top: 60px;
+    max-width: 80%;
+    margin-inline: auto;
+  }
+
+  .intro p{
+    font-size: 40px;
+  }
+
+  .intro h1{
+    font-size: 100px;
+    line-height: 75px;
+  }
+  .intro .head_small{
+    font-size: 75px;
+  }
+
+  .intro .intro_desc{
+    display: flex;
+    margin-left: 20px;
+    max-width: 50%;
+    align-self: flex-start;
+    line-height: 18px;
+    padding: 25px 35px;
+  }
+
+  .intro h2{
+    margin-top: -15px;
+    font-size: 40px;
+  }
+
+  .intro .location{
+    font-size: 25px;
+  }
+
+  .programs{
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    gap: 4px;
+  }
+
+  .program {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .program:hover {
+    border: 1px solid white;
+  }
+
+  .musicians{
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-inline: auto;
+  }
+  .musician{
+    margin-inline: auto;
+    display: flex;
+    max-width: 40%;
   }
 }
