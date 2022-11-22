@@ -44,7 +44,6 @@ nav .fa-bars {
 }
 
 .intro {
-  padding-top: 60px;
   padding-bottom: 50px;
 }
 
@@ -72,7 +71,8 @@ h1 .head_small {
 .intro .intro_desc {
   margin-top: 35px;
   font-family: var(--ff-lato);
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 14px;
   border: 2px solid white;
   padding: 15px;
   max-width: 80%;
@@ -205,6 +205,7 @@ h1 .head_small {
 
 .musician h3 {
   font-weight: 700;
+  letter-spacing: -1px;
   color: var(--clr-dark);
 }
 
@@ -288,6 +289,50 @@ footer p {
   font-size: 12px;
 }
 
+/* Menu */
+
+.menu {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--clr-dark);
+  padding: 150px 0 50px 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  transition: top 1s ease 0s;
+}
+
+.menu ul {
+  margin-top: 120px;
+}
+.menu li {
+  margin: 0;
+  list-style-type: none;
+  padding: 15px 0;
+  text-align: center;
+  font-family: var(--ff-lato);
+}
+.menu a, .fa-xmark{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menu a:hover{
+  color: var(--clr-red);
+  transition: 0.5s ease-in-out;
+}
+.fa-xmark {
+  display: block;
+  align-self: flex-end;
+  margin-right: 30px;
+  margin-top: -110px;
+}
 /* About Us section */
 
 .about_title {
@@ -416,4 +461,13 @@ footer p {
 
 .concert h3 {
   font-size: 17px;
+}
+
+
+/* Desktop Version*/
+
+@media (min-width: 768px){
+  nav .fa-bars{
+    display: none;
+  }
 }
