@@ -3,7 +3,7 @@
 :root {
   --clr-dark: #272a31;
   --clr-red: #ec5242;
-  --clr-gray: #ececec;
+  --clr-gray: #d3d3d3;
   --ff-coco: 'COCOGOOSE', sans-serif;
   --ff-lato: 'Lato', sans-serif;
 }
@@ -554,7 +554,7 @@ footer h3 {
     display: flex;
     list-style-type: none;
     justify-self: flex-end;
-    gap: 50px;
+    gap: 15px;
   }
 
   .navbar .last a:hover {
@@ -696,5 +696,15 @@ footer h3 {
 
   .section_three .concert {
     padding: 75px 90px;
+  }
+
+  .about-partner {
+    display: none;
+  }
+
+  .foot_content {
+    background-color: var(--clr-dark);
+    color: var(--clr-gray);
+    padding: 40px 0;
   }
 }
