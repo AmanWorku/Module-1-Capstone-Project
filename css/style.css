@@ -16,6 +16,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   font-size: 1.25rem;
 }
@@ -36,9 +37,12 @@ p {
   background-repeat: no-repeat;
   max-height: 800px;
 }
-.top, .navbar{
+
+.top,
+.navbar {
   display: none;
 }
+
 nav .fa-bars {
   font-size: 2em;
   padding: 15px;
@@ -98,6 +102,10 @@ h1 .head_small {
   letter-spacing: 0;
 }
 
+footer p {
+  font-size: 12px;
+}
+
 .intro p {
   font-family: var(--ff-lato);
   font-size: 16px;
@@ -142,14 +150,6 @@ h1 .head_small {
   padding: 10px;
   font-family: var(--ff-lato);
   align-items: center;
-}
-
-.program h3 {
-  color: var(--clr-red);
-}
-
-.program p {
-  font-size: 16px;
 }
 
 .program i {
@@ -204,12 +204,6 @@ h1 .head_small {
   max-width: 600px;
 }
 
-.musician h3 {
-  font-weight: 700;
-  letter-spacing: -1px;
-  color: var(--clr-dark);
-}
-
 .musician_line {
   margin: 15px 0;
   display: block;
@@ -248,26 +242,31 @@ h1 .head_small {
 .logo_list {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   padding-top: 40px;
-  gap: 10px;
+  gap: 40px;
   flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
 }
 
-.logo_list img {
-  mix-blend-mode: luminosity;
-  max-width: 70%;
+.menu a,
+.fa-xmark {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 
-/* .gog{ */
+.logo_list a {
+  font-size: 2em;
+  color: white;
+}
 
-/*    margin: 0; */
-
-/*    max-width: 30%; */
-
-/*    height: 10%; */
-
-/* } */
+.logo_list a:hover {
+  color: #bebebe;
+  transition: 0.3s ease;
+}
 
 footer {
   font-family: var(--ff-lato);
@@ -286,8 +285,18 @@ footer h3 {
   font-size: 0.8em;
 }
 
-footer p {
-  font-size: 12px;
+.musician h3 {
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--clr-dark);
+}
+
+.program h3 {
+  color: var(--clr-red);
+}
+
+.program p {
+  font-size: 16px;
 }
 
 /* Menu */
@@ -311,6 +320,7 @@ footer p {
 .menu ul {
   margin-top: 120px;
 }
+
 .menu li {
   margin: 0;
   list-style-type: none;
@@ -318,22 +328,19 @@ footer p {
   text-align: center;
   font-family: var(--ff-lato);
 }
-.menu a, .fa-xmark{
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-}
 
-.menu a:hover{
+.menu a:hover {
   color: var(--clr-red);
   transition: 0.5s ease-in-out;
 }
+
 .fa-xmark {
   display: block;
   align-self: flex-end;
   margin-right: 30px;
   margin-top: -110px;
 }
+
 /* About Us section */
 
 .about_title {
@@ -352,6 +359,10 @@ footer p {
   font-weight: 500;
   letter-spacing: -1px;
   line-height: 35px;
+}
+
+.logo_desc {
+  display: none;
 }
 
 .about_sub {
@@ -465,65 +476,38 @@ footer p {
 }
 
 
-/* Desktop Version*/
+/* Desktop Version */
 
-@media (min-width: 768px){
-
-  nav .fa-bars{
+@media (min-width: 768px) {
+  nav .fa-bars {
     display: none;
   }
 
-  .top{
-    padding: 5px 150px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    background-color: var(--clr-dark);
-    color: white;
+  .navbar ul a {
+    text-decoration: none;
+    font-family: var(--ff-lato);
+    color: var(--clr-dark);
+    font-size: 16px;
   }
-  .top li{
-    list-style-type: none;
-    display: inline-block;
-    padding: 0 5px;
-  }
-  .top li a{
+
+  .top li a {
     text-decoration: none;
     color: white;
     font-family: var(--ff-lato);
     font-size: 15px;
   }
 
-  .top li a:hover , .top i:hover {
+  .navbar .last a {
+    border: 2px solid var(--clr-red);
     color: var(--clr-red);
-    cursor: pointer;
-    transition: 0.2s ease;
+    padding: 5px 10px;
+    margin-top: -10px;
   }
 
-  .navbar{
-    display: flex;
-    background-color: white;
-    justify-content: space-between;
-    padding: 15px 10vw;
-  }
-
-  .navbar img{
-    max-width: 150px;
-    height: auto;
-  }
-
-  .navbar ul{
-    padding-top: 5px;
-    display: flex;
-    list-style-type: none;
-    justify-self: flex-end;
-    gap: 50px;
-  }
-
-  .navbar ul a{
-    text-decoration: none;
-    font-family: var(--ff-lato);
-    color: var(--clr-dark);
-    font-size: 16px;
+  .navbar .active a {
+    color: var(--clr-red);
+    border-bottom: 1px solid var(--clr-red);
+    padding-bottom: 3px;
   }
 
   .navbar ul a:hover {
@@ -531,11 +515,46 @@ footer p {
     color: var(--clr-red);
   }
 
-  .navbar .last a{
-    border: 2px solid var(--clr-red);
+  .top {
+    padding: 5px 150px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    background-color: var(--clr-dark);
+    color: white;
+  }
+
+  .top li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 5px;
+  }
+
+  .top li a:hover,
+  .top i:hover {
     color: var(--clr-red);
-    padding: 5px 10px;
-    margin-top: -10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  .navbar {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    padding: 15px 10vw;
+  }
+
+  .navbar img {
+    max-width: 150px;
+    height: auto;
+  }
+
+  .navbar ul {
+    padding-top: 5px;
+    display: flex;
+    list-style-type: none;
+    justify-self: flex-end;
+    gap: 50px;
   }
 
   .navbar .last a:hover {
@@ -549,19 +568,20 @@ footer p {
     margin-inline: auto;
   }
 
-  .intro p{
+  .intro p {
     font-size: 40px;
   }
 
-  .intro h1{
+  .intro h1 {
     font-size: 100px;
     line-height: 75px;
   }
-  .intro .head_small{
+
+  .intro .head_small {
     font-size: 75px;
   }
 
-  .intro .intro_desc{
+  .intro .intro_desc {
     display: flex;
     margin-left: 20px;
     max-width: 50%;
@@ -570,16 +590,20 @@ footer p {
     padding: 25px 35px;
   }
 
-  .intro h2{
+  .intro h2 {
     margin-top: -15px;
     font-size: 40px;
   }
 
-  .intro .location{
+  .intro .location {
     font-size: 25px;
   }
 
-  .programs{
+  .main_program {
+    padding: 50px 0;
+  }
+
+  .programs {
     margin-inline: auto;
     display: flex;
     flex-direction: row;
@@ -599,7 +623,7 @@ footer p {
     border: 1px solid white;
   }
 
-  .musicians{
+  .musicians {
     display: flex;
     flex-direction: row;
     width: 75%;
@@ -607,9 +631,70 @@ footer p {
     gap: 50px;
     margin-inline: auto;
   }
-  .musician{
+
+  .musician {
     margin-inline: auto;
     display: flex;
     max-width: 40%;
+  }
+
+  .foot_content .no_break {
+    display: none;
+  }
+
+  .right_section {
+    padding-top: 3px;
+  }
+
+  /*  About Section */
+
+  .intro_welcome {
+    display: none;
+  }
+
+  .about_title h1 {
+    padding-top: 90px;
+    font-size: 4.2em;
+    line-height: 0.75em;
+  }
+
+  .about_title .about_sub {
+    font-size: 0.75em;
+  }
+
+  .about_desc {
+    background-color: white;
+    width: 65%;
+    color: var(--clr-dark);
+  }
+
+  .about_desc_desk {
+    display: inline;
+    line-height: 15px;
+  }
+
+  .section_two {
+    color: var(--clr-dark);
+    max-width: 50%;
+    margin-inline: auto;
+    line-height: 25px;
+  }
+
+  .section_two img {
+    max-width: 350px;
+    padding: 40px 60px;
+  }
+
+  .section_three .concert_contain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    max-width: 75%;
+    margin: auto;
+  }
+
+  .section_three .concert {
+    padding: 75px 90px;
   }
 }
