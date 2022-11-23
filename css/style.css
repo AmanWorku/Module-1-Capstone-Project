@@ -33,8 +33,9 @@ p {
   background-color: #fbfbfb;
   background-image: url("../assets/intro_bg.jpg");
   background-size: cover;
-  background-position-y: -70px;
+  background-position-y: -300px;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   max-height: 800px;
 }
 
@@ -305,7 +306,7 @@ footer h3 {
   position: fixed;
   height: 100vh;
   width: 100%;
-  background-color: var(--clr-dark);
+  background-color: #272a31ee;
   padding: 150px 0 50px 0;
   display: none;
   flex-direction: column;
