@@ -30,7 +30,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 BA Sounds Music <a name="about-project"></a>
 
 
 **This Module-1 Capstone Project** is a project made at the end of the first module at Microverse. It demonstrates what I learned in the first module.
